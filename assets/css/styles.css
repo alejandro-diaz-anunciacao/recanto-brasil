@@ -1,0 +1,660 @@
+/* ==========================================================================
+   Recanto Brasil — estilos
+   Mobile-first · Paleta cálida de cafetería
+   ========================================================================== */
+
+/* ---------- Variables ---------- */
+:root {
+  --cafe-900: #3a2111;
+  --cafe-800: #4a2c17;
+  --cafe-600: #8b5e34;
+  --crema: #f5ebe0;
+  --crema-claro: #fbf6f0;
+  --oliva: #6b705c;
+  --texto: #2b2119;
+  --texto-suave: #6a5a4b;
+  --whatsapp: #25d366;
+  --glovo: #ffc244;
+  --blanco: #ffffff;
+  --sombra: 0 10px 30px rgba(74, 44, 23, 0.12);
+  --radio: 14px;
+  --ancho: 1120px;
+  --header-h: 68px;
+}
+
+/* ---------- Reset básico ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--texto);
+  background-color: var(--crema-claro);
+  line-height: 1.65;
+}
+
+img,
+iframe {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--cafe-600);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--cafe-800);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ---------- Utilidades ---------- */
+.wrap {
+  width: 100%;
+  max-width: var(--ancho);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: var(--cafe-800);
+  color: var(--blanco);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 var(--radio) 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.85rem 1.6rem;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--oliva);
+  outline-offset: 3px;
+}
+
+.btn--primary {
+  background-color: var(--cafe-800);
+  color: var(--blanco);
+}
+
+.btn--primary:hover {
+  background-color: var(--cafe-900);
+}
+
+.btn--whatsapp {
+  background-color: var(--whatsapp);
+  color: #06381f;
+}
+
+.btn--glovo {
+  background-color: var(--glovo);
+  color: var(--cafe-900);
+}
+
+.btn--lg {
+  font-size: 1.05rem;
+  padding: 1rem 1.9rem;
+}
+
+/* ==========================================================================
+   Header / Navegación
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  background-color: rgba(245, 235, 224, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(74, 44, 23, 0.1);
+}
+
+.nav {
+  max-width: var(--ancho);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  min-height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--cafe-800);
+  white-space: nowrap;
+}
+
+.nav__brand:hover {
+  text-decoration: none;
+}
+
+/* Botón hamburguesa */
+.nav__toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.nav__toggle-bar {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--cafe-800);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Menú móvil */
+.nav__list {
+  position: absolute;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  background-color: var(--crema);
+  border-bottom: 1px solid rgba(74, 44, 23, 0.12);
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem 1.25rem 1rem;
+  box-shadow: var(--sombra);
+}
+
+.nav__list.is-open {
+  display: flex;
+}
+
+.nav__list a {
+  display: block;
+  padding: 0.75rem 0.25rem;
+  color: var(--cafe-800);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(74, 44, 23, 0.08);
+}
+
+.nav__list li:last-child a {
+  border-bottom: 0;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  position: relative;
+  min-height: 88svh;
+  display: flex;
+  align-items: center;
+  margin-top: var(--header-h);
+  color: var(--blanco);
+  background-image:
+    linear-gradient(180deg, rgba(58, 33, 17, 0.55), rgba(58, 33, 17, 0.78)),
+    url("https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1600&q=80&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__inner {
+  width: 100%;
+  max-width: var(--ancho);
+  margin-inline: auto;
+  padding: 4rem 1.25rem;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--crema);
+  margin-bottom: 0.75rem;
+}
+
+.hero__title {
+  color: var(--blanco);
+  font-size: clamp(2.1rem, 7vw, 3.6rem);
+  margin-bottom: 1rem;
+}
+
+.hero__slogan {
+  max-width: 34rem;
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  color: #f3e9dd;
+  margin-bottom: 1.75rem;
+}
+
+/* ==========================================================================
+   Secciones
+   ========================================================================== */
+.section {
+  padding: 4rem 0;
+}
+
+.section:nth-of-type(even) {
+  background-color: var(--crema);
+}
+
+.section__title {
+  font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+
+.section__lead {
+  color: var(--texto-suave);
+  max-width: 42rem;
+  margin-bottom: 1.75rem;
+}
+
+.grid-2 {
+  display: grid;
+  gap: 2rem;
+}
+
+.section__media {
+  margin: 0;
+}
+
+.section__media img {
+  border-radius: var(--radio);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: var(--sombra);
+}
+
+.section__banner {
+  margin: 0 0 2.5rem;
+}
+
+.section__banner img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Menú
+   ========================================================================== */
+.menu-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.menu-card {
+  background-color: var(--blanco);
+  border: 1px solid rgba(139, 94, 52, 0.18);
+  border-radius: var(--radio);
+  padding: 1.4rem 1.5rem;
+  box-shadow: 0 4px 14px rgba(74, 44, 23, 0.06);
+}
+
+.menu-card h3 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--oliva);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--crema);
+}
+
+.menu-card li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dotted rgba(139, 94, 52, 0.35);
+}
+
+.menu-card li:last-child {
+  border-bottom: 0;
+}
+
+.menu-card .nombre {
+  color: var(--texto);
+}
+
+.menu-card .precio {
+  font-weight: 600;
+  color: var(--cafe-800);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Pide Ya
+   ========================================================================== */
+.section--pide .btn--glovo {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.aviso {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-bottom: 1.25rem;
+}
+
+/* ==========================================================================
+   Eventos
+   ========================================================================== */
+.section--eventos .btn--whatsapp {
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.form-evento {
+  background-color: var(--blanco);
+  border: 1px solid rgba(139, 94, 52, 0.18);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--cafe-800);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font: inherit;
+  color: var(--texto);
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgba(139, 94, 52, 0.35);
+  border-radius: 10px;
+  background-color: var(--crema-claro);
+  width: 100%;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 3px solid rgba(107, 112, 92, 0.4);
+  outline-offset: 1px;
+  border-color: var(--oliva);
+}
+
+.form-evento .btn {
+  justify-self: start;
+}
+
+.form-note {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-top: 1.25rem;
+}
+
+.honeypot {
+  display: none;
+}
+
+/* ==========================================================================
+   Encuéntranos
+   ========================================================================== */
+.mapa {
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  margin-bottom: 1.75rem;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+}
+
+.info-local {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.info-local__bloque {
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  padding: 1.25rem 1.4rem;
+  border: 1px solid rgba(139, 94, 52, 0.15);
+}
+
+.info-local__bloque h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--oliva);
+  margin-bottom: 0.4rem;
+}
+
+.info-local__nota {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background-color: var(--cafe-800);
+  color: var(--crema);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.site-footer a {
+  color: var(--crema);
+}
+
+/* ==========================================================================
+   Página de gracias
+   ========================================================================== */
+.gracias {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+  background-image:
+    linear-gradient(rgba(58, 33, 17, 0.75), rgba(58, 33, 17, 0.85)),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.gracias__card {
+  background-color: var(--crema-claro);
+  border-radius: var(--radio);
+  padding: 2.5rem 2rem;
+  max-width: 32rem;
+  text-align: center;
+  box-shadow: var(--sombra);
+}
+
+.gracias__card h1 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+.gracias__card p {
+  color: var(--texto-suave);
+  margin-bottom: 1.75rem;
+}
+
+/* ==========================================================================
+   Escritorio (≥ 800px)
+   ========================================================================== */
+@media (min-width: 800px) {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    gap: 0.35rem;
+  }
+
+  .nav__list a {
+    border-bottom: 0;
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+  }
+
+  .nav__list a:hover {
+    background-color: var(--crema);
+    text-decoration: none;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .grid-2--reverse .section__media {
+    order: 2;
+  }
+
+  .section__banner img {
+    height: 340px;
+    border-radius: var(--radio);
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .section--pide .btn--glovo,
+  .section--eventos .btn--whatsapp {
+    width: auto;
+  }
+
+  .form-evento {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
+
+  .field--full {
+    grid-column: 1 / -1;
+  }
+
+  .info-local {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* ==========================================================================
+   Preferencias de movimiento reducido
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
+}

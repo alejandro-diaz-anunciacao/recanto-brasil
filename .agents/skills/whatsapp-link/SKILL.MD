@@ -1,0 +1,1 @@
+Para enlaces de WhatsApp, usar siempre el formato https://wa.me/NUMERO?text=MENSAJE_PREFIJADO. El número debe ir sin +, sin espacios y con código de país.

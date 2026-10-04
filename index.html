@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recanto Brasil — Cafetería en Madrid</title>
+  <meta name="description" content="Recanto Brasil. Cafés, raciones, bocadillos y especialidades brasileñas en Madrid. Pide por WhatsApp o a domicilio por Glovo." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <!-- ============ HEADER / NAVEGACIÓN ============ -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="nav__brand" href="#inicio">Recanto Brasil</a>
+
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Abrir menú de navegación"
+      >
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#pide-ya">Pide Ya</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#encuentranos">Encuéntranos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ INICIO (HERO) ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Cafetería de barrio</p>
+        <h1 class="hero__title" id="hero-title">Recanto Brasil</h1>
+        <p class="hero__slogan">Café recién hecho, raciones y sabores de Brasil en un rincón acogedor.</p>
+        <a class="btn btn--primary" href="#menu">Ver Menú</a>
+      </div>
+    </section>
+
+    <!-- ============ NOSOTROS ============ -->
+    <section class="section section--nosotros" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="wrap grid-2">
+        <div class="section__text">
+          <h2 class="section__title" id="nosotros-title">Nosotros</h2>
+          <!-- TODO: sustituir por el texto real "Nosotros" -->
+          <p>
+            Somos una cafetería familiar con alma brasileña. Cada mañana preparamos café
+            recién molido y recibimos a nuestros vecinos como en casa, con calma y buena
+            conversación.
+          </p>
+          <p>
+            Apostamos por el producto de cercanía: bocadillos hechos al momento, repostería
+            casera y especialidades como el pão de queijo o la coxinha. Un lugar para
+            desayunar, tapear o simplemente parar un rato.
+          </p>
+        </div>
+        <figure class="section__media">
+          <img
+            src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1200&q=80&auto=format&fit=crop"
+            alt="Barista preparando café en la barra de la cafetería"
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ MENÚ ============ -->
+    <section class="section section--menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <h2 class="section__title" id="menu-title">Menú</h2>
+        <p class="section__lead">Precios con IVA incluido. Pregúntanos por las sugerencias del día.</p>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <h3>Bebidas calientes</h3>
+            <ul>
+              <li><span class="nombre">Cola Cao</span><span class="precio">2,00 €</span></li>
+              <li><span class="nombre">Café expreso, infusiones</span><span class="precio">1,50 €</span></li>
+              <li><span class="nombre">Café con leche sencillo</span><span class="precio">1,50 €</span></li>
+              <li><span class="nombre">Café con leche doble</span><span class="precio">2,50 €</span></li>
+              <li><span class="nombre">Vaso de leche sencillo</span><span class="precio">1,00 €</span></li>
+              <li><span class="nombre">Vaso de leche doble</span><span class="precio">1,20 €</span></li>
+              <li><span class="nombre">Café cúrcuma</span><span class="precio">1,80 €</span></li>
+              <li><span class="nombre">Café cremoso con licor</span><span class="precio">2,00 €</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Cervezas, refrescos y zumos</h3>
+            <ul>
+              <li><span class="nombre">Agua mineral pequeña</span><span class="precio">1,00 €</span></li>
+              <li><span class="nombre">Agua mineral grande</span><span class="precio">2,00 €</span></li>
+              <li><span class="nombre">Frappe</span><span class="precio">4,50 €</span></li>
+              <li><span class="nombre">Smoothie</span><span class="precio">4,50 €</span></li>
+              <li><span class="nombre">Bote de cerveza</span><span class="precio">2,00 €</span></li>
+              <li><span class="nombre">Bote de refresco</span><span class="precio">1,50 €</span></li>
+              <li><span class="nombre">Cerveza sin alcohol</span><span class="precio">2,00 €</span></li>
+              <li><span class="nombre">Tónicas</span><span class="precio">2,00 €</span></li>
+              <li><span class="nombre">Zumo natural de naranja</span><span class="precio">3,00 €</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Vinos comunes, generosos y dulces</h3>
+            <ul>
+              <li><span class="nombre">Rioja, copa</span><span class="precio">2,50 €</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Anisados, cognacs, vermuts, etc.</h3>
+            <ul>
+              <li><span class="nombre">Whisky de importación</span><span class="precio">4,00 €</span></li>
+              <li><span class="nombre">Cuba Libre</span><span class="precio">5,50 €</span></li>
+              <li><span class="nombre">Caipiriña</span><span class="precio">5,50 €</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Raciones</h3>
+            <ul>
+              <li><span class="nombre">Aceitunas rellenas gde</span><span class="precio">3,00 €</span></li>
+              <li><span class="nombre">Tequeños 5 uds</span><span class="precio">7,00 €</span></li>
+              <li><span class="nombre">Crocante de queso Gouda 10 uds</span><span class="precio">5,00 €</span></li>
+              <li><span class="nombre">Croquetas de Jamón ibérico 6 uds</span><span class="precio">6,00 €</span></li>
+              <li><span class="nombre">Alitas de pollo a la barbacoa 8 uds</span><span class="precio">7,00 €</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Bocadillos</h3>
+            <ul>
+              <li><span class="nombre">Bocapizzas</span><span class="precio">4,00 €</span></li>
+              <li><span class="nombre">Chorizo o salchichón</span><span class="precio">4,50 €</span></li>
+              <li><span class="nombre">Hamburguesa c/tom/lech/queso</span><span class="precio">4,50 €</span></li>
+              <li><span class="nombre">Jamón serrano con tomate</span><span class="precio">5,00 €</span></li>
+              <li><span class="nombre">Perrito brasileño</span><span class="precio">5,00 €</span></li>
+              <li><span class="nombre">Pollo (lechuga, tomate, mayonesa, queso)</span><span class="precio">5,50 €</span></li>
+              <li><span class="nombre">Bacon queso</span><span class="precio">4,50 €</span></li>
+              <li><span class="nombre">Sándwich vegetal/queso</span><span class="precio">4,00 €</span></li>
+              <li><span class="nombre">Sándwich mixto</span><span class="precio">3,00 €</span></li>
+              <li><span class="nombre">Lomo queso</span><span class="precio">4,50 €</span></li>
+              <li><span class="nombre">Tortilla</span><span class="precio">3,50 €</span></li>
+              <li><span class="nombre">Hamburguesa de horno</span><span class="precio">4,00 €</span></li>
+              <li><span class="nombre">Pizza mediana</span><span class="precio">7,00 €</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Pastelería</h3>
+            <ul>
+              <li><span class="nombre">Croissant a la plancha</span><span class="precio">1,50 €</span></li>
+              <li><span class="nombre">Desayuno (café, tostada o croissant)</span><span class="precio">2,60 €</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Saladitos brasileños</h3>
+            <ul>
+              <li><span class="nombre">Coxinha</span><span class="precio">3,00 €</span></li>
+              <li><span class="nombre">Empadinha de pollo cremoso</span><span class="precio">2,50 €</span></li>
+              <li><span class="nombre">Pastel de feira</span><span class="precio">5,00 €</span></li>
+              <li><span class="nombre">Pão de queijo</span><span class="precio">1,00 €</span></li>
+              <li><span class="nombre">Napolitana jamón y queso casera</span><span class="precio">3,50 €</span></li>
+              <li><span class="nombre">Tarta casera</span><span class="precio">2,50 €</span></li>
+              <li><span class="nombre">Brigadeiro</span><span class="precio">1,00 €</span></li>
+              <li><span class="nombre">Cookie rellena</span><span class="precio">3,50 €</span></li>
+              <li><span class="nombre">Muffin</span><span class="precio">2,00 €</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PIDE YA ============ -->
+    <section class="section section--pide" id="pide-ya" aria-labelledby="pide-title">
+      <div class="wrap grid-2 grid-2--reverse">
+        <figure class="section__media">
+          <img
+            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1200&q=80&auto=format&fit=crop"
+            alt="Café para llevar en un vaso de cartón listo para reparto"
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
+        </figure>
+        <div class="section__text">
+          <h2 class="section__title" id="pide-title">Pide Ya</h2>
+          <p>Disfruta de nuestros bocadillos, raciones y cafés sin salir de casa.</p>
+
+          <!-- TODO: reemplazar cuando Glovo dé el enlace -->
+          <a class="btn btn--glovo" href="https://glovoapp.com/TODO" target="_blank" rel="noopener">
+            Pide a domicilio por Glovo
+          </a>
+
+          <p class="aviso">Próximamente disponible. Mientras tanto, escríbenos por WhatsApp.</p>
+
+          <a
+            class="btn btn--whatsapp"
+            href="https://wa.me/34696475720"
+            target="_blank"
+            rel="noopener"
+          >
+            Escríbenos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTOS ============ -->
+    <section class="section section--eventos" id="eventos" aria-labelledby="eventos-title">
+      <figure class="section__banner">
+        <img
+          src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&q=80&auto=format&fit=crop"
+          alt="Mesa con varias personas compartiendo café y conversación"
+          loading="lazy"
+          width="1200"
+          height="800"
+        />
+      </figure>
+
+      <div class="wrap">
+        <h2 class="section__title" id="eventos-title">Eventos</h2>
+        <p class="section__lead">
+          Organizamos cumpleaños, reuniones y catering en nuestro local. Cuéntanos qué
+          necesitas y te preparamos una propuesta a medida.
+        </p>
+
+        <a
+          class="btn btn--whatsapp btn--lg"
+          href="https://wa.me/34696475720?text=Hola,%20quiero%20consultar%20por%20un%20evento"
+          target="_blank"
+          rel="noopener"
+        >
+          Escríbenos por WhatsApp (respuesta más rápida)
+        </a>
+
+        <form
+          class="form-evento"
+          name="contacto-eventos"
+          method="POST"
+          action="/gracias"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contacto-eventos" />
+          <input type="hidden" name="subject" value="Nueva solicitud de evento — %{formName}" />
+
+          <p class="honeypot" style="display:none" aria-hidden="true">
+            <label>No rellenes este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          </p>
+
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" />
+          </div>
+
+          <div class="field">
+            <label for="tipo_evento">Tipo de evento</label>
+            <select id="tipo_evento" name="tipo_evento" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="cumpleanos">Cumpleaños</option>
+              <option value="reunion">Reunión</option>
+              <option value="catering">Catering</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="field field--full">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+
+          <div class="field field--full">
+            <button class="btn btn--primary" type="submit">Enviar solicitud</button>
+          </div>
+        </form>
+
+        <p class="form-note">
+          También puedes escribirnos directamente a
+          <a href="mailto:paulamariabrasil01@gmail.com">paulamariabrasil01@gmail.com</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ ENCUÉNTRANOS ============ -->
+    <section class="section section--encuentranos" id="encuentranos" aria-labelledby="encuentranos-title">
+      <div class="wrap">
+        <h2 class="section__title" id="encuentranos-title">Encuéntranos</h2>
+
+        <div class="mapa">
+          <iframe
+            title="Mapa con la ubicación de Recanto Brasil"
+            src="https://www.google.com/maps?q=Av.+de+la+Memoria,+3,+Moncloa+-+Aravaca,+28040+Madrid&output=embed"
+            width="100%"
+            height="380"
+            style="border:0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="info-local">
+          <div class="info-local__bloque">
+            <h3>Horario</h3>
+            <p>
+              Todos los días excepto sábados<br />
+              <span class="info-local__nota">De 8:00 a 18:00 h</span>
+            </p>
+          </div>
+          <div class="info-local__bloque">
+            <h3>Dirección</h3>
+            <p>
+              Av. de la Memoria, 3, Moncloa - Aravaca, 28040 Madrid<br />
+              <span class="info-local__nota">Dentro del colegio mayor Casa do Brasil</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer__inner">
+      <p>&copy; 2026 Recanto Brasil</p>
+      <ul class="footer__links">
+        <li>
+          <a href="https://www.instagram.com/recanto_brasil_madri/" target="_blank" rel="noopener">Instagram</a>
+        </li>
+        <li>
+          <a href="mailto:paulamariabrasil01@gmail.com">paulamariabrasil01@gmail.com</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
